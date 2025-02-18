@@ -5,40 +5,87 @@
 
 .title {
   font-size: 5rem;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.2rem;
+  color: #cccccc;
+  transition-property: text-shadow;
+  transition-duration: 250ms;
+}
+
+.title:hover {
+  text-shadow: 0 0 10px #80808080,
+    0 0 20px #80c0c060,
+    0 0 30px #00ffff20;
 }
 
 .search {
-  background-color: #00000000;
+  background-color: #cccccc00;
   color: #ffffff;
   width: 32rem;
   height: 2.5rem;
   font-size: 1.2rem;
-  border: 0.1rem solid #ffffff;
+  border: 0.1rem solid #cccccc88;
   border-radius: 2rem;
   padding: 0 1rem;
   outline: none;
+  transition-property: border;
+  transition-duration: 250ms;
+}
+
+.search:hover {
+  border: 0.1rem solid #cccccc;
 }
 
 .searchButton {
-  background-color: #ffffff;
+  background-color: #dddddddd;
   color: #000000;
   height: 2.5rem;
   font-size: 1.2rem;
+  font-weight: 600;
   margin: 0 1rem;
   border: 0.1rem solid #ffffff;
   border-radius: 2rem;
   padding: 0 1rem;
-  transition-property: box-shadow;
-  transition-duration: 0.2s;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms, 250ms;
 }
 
 .searchButton:hover {
+  background-color: #ffffffee;
   box-shadow: 0 0 1rem #ffffff;
 }
 
 .searchButton:active {
   box-shadow: 0 0 1rem #ffffff;
   background-color: #ffffffc0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.links-row {
+  height: 4rem;
+}
+
+.links-column {
+  width: 12rem;
+}
+
+.links-column-item {
+  margin: 1rem;
+  border: 0.1rem solid #44444488;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 250ms, 250ms, 250ms;
+}
+
+.links-column-item:hover {
+  background-color: #ffffff20;
+  border: 0.1rem solid #88888888;
+  box-shadow: 0 0 10px #80808080;
 }
