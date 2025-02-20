@@ -37,7 +37,7 @@ const links = [
     },
   ],
   [
-    { name: "ChatGPT", address: "https://chatgpt.com//" },
+    { name: "ChatGPT", address: "https://chatgpt.com/" },
     { name: "Microsoft 365", address: "https://m365.cloud.microsoft/?auth=2/" },
     { name: "OneDrive", address: "https://m365.cloud.microsoft/?auth=2/" },
   ],
