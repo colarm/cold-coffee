@@ -3,7 +3,7 @@ import { useState } from "react";
 
 // Language pack
 let lang = navigator.language || "";
-// lang = "en-GB"; // 测试用，实际使用时应根据用户浏览器语言设置
+lang = "en-GB"; // 测试用，实际使用时应根据用户浏览器语言设置
 const textList = {
   "en-GB": {
     title: "COLD COFFEE",
@@ -42,7 +42,7 @@ const links = [
     { name: "OneDrive", address: "https://m365.cloud.microsoft/?auth=2/" },
   ],
   [
-    { name: "Leet Code", address: "https://leetcode.com/problemset/" },
+    { name: "Leet Code", address: "https://www.google.co.uk/" },
     { name: "Github", address: "https://github.com/colarm?tab=repositories/" },
     {
       name: "Gitlab",
