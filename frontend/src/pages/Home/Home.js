@@ -42,7 +42,7 @@ const links = [
     { name: "OneDrive", address: "https://m365.cloud.microsoft/?auth=2/" },
   ],
   [
-    { name: "Leet Code", address: "https://www.google.co.uk/" },
+    { name: "Leet Code", address: "https://leetcode.com/problemset/" },
     { name: "Github", address: "https://github.com/colarm?tab=repositories/" },
     {
       name: "Gitlab",
