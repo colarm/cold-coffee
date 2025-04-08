@@ -58,10 +58,14 @@ const links = [
   ],
   [
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: "Leet Code", address: "https://leetcode.com/problemset/" },
     { name: "Github", address: "https://github.com/" },
 =======
     { name: "Leet Code", address: "https://www.google.co.uk/" },
+=======
+    { name: "Leet Code", address: "https://leetcode.com/problemset/" },
+>>>>>>> c0b1c47 (update leetcode)
     { name: "Github", address: "https://github.com/colarm?tab=repositories/" },
 >>>>>>> eba544e (production init)
     {
