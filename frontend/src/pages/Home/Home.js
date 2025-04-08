@@ -1,6 +1,12 @@
 import "./Home.css";
 import { useState } from "react";
 
+<<<<<<< HEAD
+=======
+// Language pack
+let lang = navigator.language || "";
+lang = "en-GB"; // 测试用，实际使用时应根据用户浏览器语言设置
+>>>>>>> eba544e (production init)
 const textList = {
   "en-GB": {
     title: "COLD COFFEE",
@@ -51,8 +57,13 @@ const links = [
     { name: "OneDrive", address: "https://m365.cloud.microsoft/?auth=2/" },
   ],
   [
+<<<<<<< HEAD
     { name: "Leet Code", address: "https://leetcode.com/problemset/" },
     { name: "Github", address: "https://github.com/" },
+=======
+    { name: "Leet Code", address: "https://www.google.co.uk/" },
+    { name: "Github", address: "https://github.com/colarm?tab=repositories/" },
+>>>>>>> eba544e (production init)
     {
       name: "Gitlab",
       address: "https://stgit.dcs.gla.ac.uk/",
