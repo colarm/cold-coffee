@@ -1,63 +1,84 @@
 .home {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.8s ease-out;
+  color: #e0f0ff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .title {
   font-size: 5rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
-  color: #cccccc;
-  transition-property: text-shadow;
-  transition-duration: 250ms;
+  color: #d1ecf2;
+  transition: text-shadow 250ms ease;
+  cursor: pointer;
 }
 
 .title:hover {
-  text-shadow: 0 0 10px #80808080,
-    0 0 20px #80c0c060,
-    0 0 30px #00ffff20;
+  text-shadow: 0 0 10px #8fffd6cc, 0 0 20px #98e0ffaa, 0 0 30px #00f5e08a;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .search {
-  background-color: #cccccc00;
-  color: #ffffff;
+  background-color: transparent;
+  color: #e0f0ff;
   width: 32rem;
+  max-width: 90vw;
   height: 2.5rem;
   font-size: 1.2rem;
-  border: 0.1rem solid #cccccc88;
+  border: 0.1rem solid #5f9ea080;
   border-radius: 2rem;
   padding: 0 1rem;
   outline: none;
-  transition-property: border;
-  transition-duration: 250ms;
+  transition: border 250ms ease, box-shadow 250ms ease;
 }
 
-.search:hover {
-  border: 0.1rem solid #cccccc;
+.search:hover,
+.search:focus {
+  border: 0.1rem solid #5f9ea0;
+  box-shadow: 0 0 10px #8fffd640;
 }
 
 .searchButton {
-  background-color: #dddddddd;
-  color: #000000;
+  background-color: #2e3c4f;
+  color: #e0f0ff;
   height: 2.5rem;
   font-size: 1.2rem;
   font-weight: 600;
-  margin: 0 1rem;
-  border: 0.1rem solid #ffffff;
+  border: 0.1rem solid #98e0ff33;
   border-radius: 2rem;
-  padding: 0 1rem;
-  transition-property: background-color, box-shadow;
-  transition-duration: 250ms, 250ms;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  transition: background-color 250ms ease, box-shadow 250ms ease;
 }
 
 .searchButton:hover {
-  background-color: #ffffffee;
-  box-shadow: 0 0 1rem #ffffff;
+  background-color: #3c4f68;
+  box-shadow: 0 0 1rem #8fffd6aa;
 }
 
 .searchButton:active {
-  box-shadow: 0 0 1rem #ffffff;
-  background-color: #ffffffc0;
+  background-color: #497594;
+  box-shadow: 0 0 0.5rem #8fffd699;
 }
 
 .links {
@@ -65,6 +86,7 @@
   justify-content: center;
   font-size: 1.5rem;
   margin: 2rem 0;
+  color: #d1ecf2;
 }
 
 .links-row {
@@ -73,19 +95,46 @@
 
 .links-column {
   width: 12rem;
+  text-align: center;
 }
 
 .links-column-item {
   margin: 1rem;
-  border: 0.1rem solid #44444488;
+  border: 0.1rem solid #6d8a9580;
   border-radius: 0.5rem;
   padding: 0.5rem 0;
-  transition-property: background-color, border, box-shadow;
-  transition-duration: 250ms, 250ms, 250ms;
+  transition: all 250ms ease;
+  cursor: pointer;
+  background-color: #1c2b36;
+  color: #e0f0ff;
 }
 
 .links-column-item:hover {
-  background-color: #ffffff20;
-  border: 0.1rem solid #88888888;
-  box-shadow: 0 0 10px #80808080;
+  background-color: #2e4451;
+  border-color: #8fffd680;
+  box-shadow: 0 0 10px #8fffd640;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .search {
+    width: 90%;
+  }
+
+  .searchButton {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .links {
+    font-size: 1.2rem;
+  }
+
+  .links-column {
+    width: auto;
+  }
 }

@@ -1,9 +1,6 @@
 import "./Home.css";
 import { useState } from "react";
 
-// Language pack
-let lang = navigator.language || "";
-lang = "en-GB"; // 测试用，实际使用时应根据用户浏览器语言设置
 const textList = {
   "en-GB": {
     title: "COLD COFFEE",
@@ -25,15 +22,27 @@ const textList = {
     title: "咖啡起始頁",
     search: "搜尋",
   },
+  "ja-JP": {
+    title: "コーヒースタートページ",
+    search: "検索",
+  },
+  "fr-FR": {
+    title: "Page d'accueil du café",
+    search: "recherche",
+  },
 };
+
+// Language pack
+let lang = navigator.language || "";
+lang = lang in textList ? lang : "en-US";
+
 const links = [
   [
     { name: "Google", address: "https://www.google.co.uk/" },
-    { name: "Moodle", address: "https://moodle.gla.ac.uk/my/courses.php/" },
+    { name: "Moodle", address: "https://moodle.gla.ac.uk/my/courses.php" },
     {
       name: "MyCampus",
-      address:
-        "https://uogstudents.mycampus.gla.ac.uk/psc/campus/EMPLOYEE/SA/c/PT_FLDASHBOARD.PT_FLDASHBOARD.GBL?DB=UOG_STUDENT_HOMEPAGE_DB&/",
+      address: "https://frontdoor.spa.gla.ac.uk/StudentPortal/default.aspx",
     },
   ],
   [
@@ -46,8 +55,7 @@ const links = [
     { name: "Github", address: "https://github.com/colarm?tab=repositories/" },
     {
       name: "Gitlab",
-      address:
-        "https://stgit.dcs.gla.ac.uk/team-project-m/2024/group-6/turn-based-card-game/",
+      address: "https://stgit.dcs.gla.ac.uk/",
     },
   ],
 ];
@@ -91,7 +99,7 @@ function Home() {
       <h1 className="title" onClick={(e) => onClick(e)}>
         {text[lang].title}
       </h1>
-      <div>
+      <div className="search-wrapper">
         <input
           className="search"
           type="text"
